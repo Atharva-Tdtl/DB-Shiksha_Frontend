@@ -46,6 +46,7 @@ const Programs = () => {
     setTab(newValue);
   };
 
+
   const handleOpenModal = (course) => {
     setSelectedCourse(course);
     setOpen(true);
@@ -256,6 +257,16 @@ const Programs = () => {
       outcomes: ["Build AI models", "Deploy applications"],
     },
   ];
+
+    const courses = [
+      { title: 'AI for Business Leaders', price: '49,999', level: 'Intermediate', category: 'Corporate', image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600' },
+      { title: 'Full Stack AI Developer', price: '89,999', level: 'Beginner to Pro', category: 'Development', image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600' },
+      { title: 'Generative AI Masterclass', price: '29,999', level: 'Advanced', category: 'Creative', image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=600' },
+      { title: 'MLOps for Engineers', price: '59,999', level: 'Advanced', category: 'Development', image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=600' },
+      { title: 'Python for AI Beginners', price: '19,999', level: 'Beginner', category: 'Basics', image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=600' },
+      { title: 'Computer Vision Specialization', price: '69,999', level: 'Intermediate', category: 'Ai Specialization', image: 'https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?auto=format&fit=crop&q=80&w=600' },
+    ];
+
 
   const filteredCourses = coursesData.filter((course) => {
     const query = searchQuery.toLowerCase();

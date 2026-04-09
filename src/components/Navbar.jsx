@@ -9,8 +9,15 @@ import Logo from '../assets/DBShiksha-Logo.png';
 
 const navItems = [
   { name: 'Home', path: '/' },
+  { name: 'About', path: '/about' },
   { name: 'Programs', path: '/programs' },
   { name: 'Certifications', path: '/certifications' },
+
+  { name: 'Enterprise', path: '/enterprise' },
+
+  { name: 'Careers', path: '/careers' },
+  { name: 'Blog', path: '/blog' },
+
   { name: 'Contact', path: '/contact' },
 ];
 

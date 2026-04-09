@@ -77,9 +77,20 @@ const Dashboard = () => {
         {/* Pricing Preview */}
         <PricingPreview />
 
+
         {/* Trust Section */}
         <TrustSection />
       </Container>
+
+      {value === 0 && (
+        <Grid container spacing={3}>
+          <Grid item xs={12} md={4}>
+            <CardCourse title="Generative AI Masterclass" price="Completed" category="AI" level="Advanced" image="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=600" />
+          </Grid>
+          {/* More courses */}
+        </Grid>
+      )}
+
 
       {/* Final CTA */}
       <CTASection onGetStartedClick={scrollToSignup} />

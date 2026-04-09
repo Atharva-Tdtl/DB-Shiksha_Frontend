@@ -14,7 +14,7 @@ const reasons = [
 
 const WhyChooseUs = () => {
   return (
-    <SectionWrapper bgcolor="#1A1A1A" title="Why Choose DBShiksha" subtitle="We don't just teach AI; we build careers that define the future.">
+    <SectionWrapper bgcolor="background.paper" title="Why Choose DBShiksha" subtitle="We don't just teach AI; we build careers that define the future.">
       <Grid container spacing={4} alignItems="center">
         <Grid item xs={12} md={6}>
           <Box

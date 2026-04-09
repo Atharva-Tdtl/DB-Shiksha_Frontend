@@ -2,8 +2,6 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #0D0D0D;
-  color: #FFFFFF;
 }
 
 ::-webkit-scrollbar {
@@ -11,16 +9,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0D0D0D;
+  background: #0d0d0d;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1A1A1A;
+  background: #1a1a1a;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #D4AF37;
+  background: #d4af37;
 }
 
 .swal-dark-popup {
