@@ -15,7 +15,7 @@ import Dashboard from './pages/Dashboard';
 import Checkout from './pages/Checkout';
 import Contact from './pages/Contact';
 import Certifications from './pages/Certifications';
-import Enterprise from './pages/enterprise';
+import Enterprise from './pages/Enterprise';
 
 function App() {
   return (
