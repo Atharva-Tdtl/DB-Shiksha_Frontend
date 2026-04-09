@@ -5,6 +5,7 @@ import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import { NavLink as RouterLink, useLocation } from 'react-router-dom';
 import { useColorMode } from '../theme/ThemeContext';
+import Logo from '../assets/DBShiksha-Logo.png';
 
 const navItems = [
   { name: 'Home', path: '/' },
@@ -41,9 +42,22 @@ const Navbar = () => {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', bgcolor: 'background.default', height: '100%', color: 'text.primary', pt: 2 }}>
-      <Typography variant="h6" sx={{ my: 2, color: '#D4AF37', fontWeight: 700 }}>
-        DBSHIKSHA
-      </Typography>
+      <Box 
+        component={RouterLink} 
+        to="/" 
+        sx={{ 
+          display: 'flex', 
+          justifyContent: 'center', 
+          py: 2 
+        }}
+      >
+        <Box 
+          component="img" 
+          src={Logo} 
+          alt="DBShiksha Logo" 
+          sx={{ height: 80, width: 'auto' }} 
+        />
+      </Box>
       <List>
         {navItems.map((item) => (
           <ListItem key={item.name} disablePadding component={RouterLink} to={item.path} sx={{ color: 'text.primary', display: 'block' }}>
@@ -63,15 +77,24 @@ const Navbar = () => {
   return (
     <AppBar position="sticky" sx={{ bgcolor: mode === 'dark' ? 'rgba(13, 13, 13, 0.95)' : 'rgba(255, 255, 255, 0.95)', backdropFilter: 'blur(10px)', borderBottom: '1px solid rgba(212, 175, 55, 0.1)', backgroundImage: 'none', boxShadow: 'none', color: 'text.primary' }}>
       <Container maxWidth="lg">
-        <Toolbar sx={{ px: { xs: 0 } }}>
-          <Typography
-            variant="h5"
-            component={RouterLink}
-            to="/"
-            sx={{ flexGrow: 1, textDecoration: 'none', color: '#D4AF37', fontWeight: 800, letterSpacing: 1 }}
+        <Toolbar sx={{ px: { xs: 0 }, py: { xs: 1, md: 1.5 } }}>
+          <Box 
+            component={RouterLink} 
+            to="/" 
+            sx={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              textDecoration: 'none',
+              flexGrow: 1
+            }}
           >
-            DB<Box component="span" sx={{ color: mode === 'dark' ? 'white' : '#0D0D0D' }}>SHIKSHA</Box>
-          </Typography>
+            <Box 
+              component="img" 
+              src={Logo} 
+              alt="DBShiksha Logo" 
+              sx={{ height: { xs: 60, md: 80 }, width: 'auto' }} 
+            />
+          </Box>
           
           <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center' }}>
             {navItems.map((item) => (

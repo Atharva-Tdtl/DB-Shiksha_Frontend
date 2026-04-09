@@ -4,6 +4,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import Logo from '../assets/DBShiksha-Logo.png';
 
 const Footer = () => {
   return (
@@ -11,9 +12,17 @@ const Footer = () => {
       <Container maxWidth="lg">
         <Grid container spacing={4}>
           <Grid item xs={12} md={4}>
-            <Typography variant="h5" sx={{ color: '#D4AF37', fontWeight: 800, mb: 2 }}>
-              DB<Box component="span" sx={{ color: 'white' }}>SHIKSHA</Box>
-            </Typography>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 2 }}>
+              <Box 
+                component="img" 
+                src={Logo} 
+                alt="DBShiksha Logo" 
+                sx={{ height: 60, width: 'auto' }} 
+              />
+              <Typography variant="h5" sx={{ color: '#D4AF37', fontWeight: 800 }}>
+                DB<Box component="span" sx={{ color: 'white' }}>SHIKSHA</Box>
+              </Typography>
+            </Box>
             <Typography variant="body2" color="text.secondary" sx={{ maxWidth: 300 }}>
               Empowering the next generation of AI leaders through industry-standard courses and hands-on learning.
             </Typography>

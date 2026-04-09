@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardMedia, Typography, Box, Chip } from '@mui/material';
 import ButtonPrimary from './ButtonPrimary';
 
-const CardCourse = ({ title, image, price, level, category }) => {
+const CardCourse = ({ title, image, price, level, category, onClick }) => {
   return (
     <Card sx={{ maxWidth: 345, height: '100%', display: 'flex', flexDirection: 'column', transition: 'transform 0.3s', '&:hover': { transform: 'translateY(-8px)' } }}>
       <CardMedia
@@ -24,7 +24,7 @@ const CardCourse = ({ title, image, price, level, category }) => {
         </Typography>
       </CardContent>
       <Box sx={{ p: 2, pt: 0 }}>
-        <ButtonPrimary fullWidth>View Details</ButtonPrimary>
+        <ButtonPrimary fullWidth onClick={onClick}>View Details</ButtonPrimary>
       </Box>
     </Card>
   );
