@@ -3,10 +3,14 @@ import { Card, CardContent, CardMedia, Typography, Box, Chip } from '@mui/materi
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import ButtonPrimary from './ButtonPrimary';
 
+
+const CardCourse = ({ title, image, price, level, category, onClick }) => {
+
 import { useNavigate } from 'react-router-dom';
 
 const CardCourse = ({ id, title, image, price, level, category, description, duration }) => {
   const navigate = useNavigate();
+
 
   return (
     <Card className="card" sx={{ height: '100%', display: 'flex', flexDirection: 'column', borderRadius: 3, boxShadow: '0 4px 12px rgba(0,0,0,0.1)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', '&:hover': { transform: 'translateY(-8px)', boxShadow: '0 12px 24px rgba(212, 175, 55, 0.2)' } }}>
@@ -41,8 +45,13 @@ const CardCourse = ({ id, title, image, price, level, category, description, dur
           </Typography>
         </Box>
       </CardContent>
+
+      <Box sx={{ p: 2, pt: 0 }}>
+        <ButtonPrimary fullWidth onClick={onClick}>View Details</ButtonPrimary>
+
       <Box sx={{ px: 3, pb: 3 }}>
         <ButtonPrimary fullWidth onClick={() => navigate('/programs')}>View Details</ButtonPrimary>
+
       </Box>
     </Card>
   );
