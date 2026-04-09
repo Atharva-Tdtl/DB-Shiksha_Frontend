@@ -15,6 +15,7 @@ import Dashboard from './pages/Dashboard';
 import Checkout from './pages/Checkout';
 import Contact from './pages/Contact';
 import Certifications from './pages/Certifications';
+import Enterprise from './pages/Enterprise';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/enterprise" element={<Enterprise />} />
               <Route path="*" element={<Home />} />
             </Routes>
           </Box>
