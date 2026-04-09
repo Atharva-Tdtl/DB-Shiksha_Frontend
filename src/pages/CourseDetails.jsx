@@ -40,7 +40,7 @@ const CourseDetails = () => {
 
   return (
     <Box>
-      <Box sx={{ bgcolor: '#1A1A1A', py: 8 }}>
+      <Box sx={{ bgcolor: 'background.paper', py: 8 }}>
         <Container maxWidth="lg">
           <Grid container spacing={4} alignItems="center">
             <Grid item xs={12} md={7}>
@@ -74,7 +74,7 @@ const CourseDetails = () => {
           <Grid item xs={12} md={6}>
             <Typography variant="h5" sx={{ mb: 3 }}>Curriculum Overview</Typography>
             {course.curriculum.map((module, index) => (
-              <Accordion key={index} sx={{ mb: 1, bgcolor: '#1A1A1A' }}>
+              <Accordion key={index} sx={{ mb: 1, bgcolor: 'background.paper' }}>
                 <AccordionSummary expandIcon={<ExpandMoreIcon color="primary" />}>
                   <Typography sx={{ fontWeight: 600 }}>{module.section}</Typography>
                 </AccordionSummary>
@@ -91,11 +91,11 @@ const CourseDetails = () => {
         </Grid>
       </SectionWrapper>
 
-      <SectionWrapper title="Tools You Will Master" bgcolor="#1A1A1A">
+      <SectionWrapper title="Tools You Will Master" bgcolor="background.paper">
         <Grid container spacing={3} justifyContent="center">
           {['Python', 'TensorFlow', 'PyTorch', 'OpenAI API', 'LangChain', 'HuggingFace'].map((tool) => (
             <Grid item key={tool} xs={6} sm={4} md={2} textAlign="center">
-              <Paper sx={{ p: 2, bgcolor: '#0D0D0D', border: '1px solid rgba(212,175,55,0.2)' }}>
+              <Paper sx={{ p: 2, bgcolor: 'background.default', border: '1px solid rgba(212,175,55,0.2)' }}>
                 <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>{tool}</Typography>
               </Paper>
             </Grid>
@@ -111,7 +111,7 @@ const CourseDetails = () => {
             { q: 'Are there any prerequisites?', a: 'Basic understanding of programming is helpful but not mandatory.' }
           ].map((pair, index) => (
             <Grid item xs={12} key={index}>
-              <Accordion sx={{ bgcolor: '#1A1A1A' }}>
+              <Accordion sx={{ bgcolor: 'background.paper' }}>
                 <AccordionSummary expandIcon={<ExpandMoreIcon color="primary" />}>
                   <Typography sx={{ fontWeight: 600 }}>{pair.q}</Typography>
                 </AccordionSummary>
@@ -124,7 +124,7 @@ const CourseDetails = () => {
         </Grid>
       </SectionWrapper>
 
-      <Box sx={{ py: 8, textAlign: 'center', bgcolor: '#1A1A1A' }}>
+      <Box sx={{ py: 8, textAlign: 'center', bgcolor: 'background.paper' }}>
         <Typography variant="h4" sx={{ mb: 4 }}>Accelerate Your AI Career Now</Typography>
         <ButtonPrimary size="large" onClick={() => navigate('/checkout')}>Enroll in {course.title}</ButtonPrimary>
       </Box>

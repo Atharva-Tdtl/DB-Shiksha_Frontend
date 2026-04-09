@@ -14,7 +14,7 @@ const Testimonials = () => {
       <Grid container spacing={4}>
         {reviews.map((rev, index) => (
           <Grid item xs={12} md={4} key={index}>
-            <Paper sx={{ p: 4, height: '100%', bgcolor: '#1A1A1A' }}>
+            <Paper sx={{ p: 4, height: '100%', bgcolor: 'background.paper' }}>
               <Rating value={5} readOnly size="small" sx={{ mb: 2, color: '#D4AF37' }} />
               <Typography variant="body1" sx={{ mb: 3, fontStyle: 'italic', color: 'text.secondary' }}>"{rev.text}"</Typography>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>

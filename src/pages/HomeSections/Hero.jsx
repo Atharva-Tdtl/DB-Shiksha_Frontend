@@ -2,8 +2,11 @@ import React from 'react';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import ButtonPrimary from '../../components/ButtonPrimary';
 import SectionWrapper from '../../components/SectionWrapper';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <SectionWrapper>
       <Grid container spacing={4} alignItems="center">
@@ -18,16 +21,27 @@ const Hero = () => {
             The India's leading AI learning platform. Get industry-standard certifications and job-ready skills in Artificial Intelligence and Machine Learning.
           </Typography>
           <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
-            <ButtonPrimary size="large" sx={{ px: 4 }}>Explore Programs</ButtonPrimary>
-            <ButtonPrimary variant="outlined" color="secondary" size="large" sx={{ px: 4, border: '1px solid rgba(255,255,255,0.3)' }}>Take AI Test</ButtonPrimary>
+            <ButtonPrimary size="large" sx={{ px: 4 }} onClick={() => navigate('/programs')}>Explore Programs</ButtonPrimary>
+            <ButtonPrimary variant="outlined" color="secondary" size="large" sx={{ px: 4, border: '1px solid rgba(255,255,255,0.3)' }} onClick={() => navigate('/programs')}>Take AI Test</ButtonPrimary>
           </Box>
         </Grid>
         <Grid item xs={12} md={6}>
           <Box
             component="img"
-            src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1000"
-            alt="AI Hero"
-            sx={{ width: '100%', borderRadius: 4, boxShadow: '0 20px 40px rgba(0,0,0,0.5)', filter: 'drop-shadow(0 0 10px rgba(212,175,55,0.2))' }}
+            src="/hero_students.jpg"
+            alt="Students learning AI"
+            sx={{ 
+              width: '100%', 
+              borderRadius: 4, 
+              boxShadow: '0 10px 30px rgba(0,0,0,0.12)', 
+              filter: 'drop-shadow(0 0 10px rgba(212,175,55,0.2))',
+              transition: 'box-shadow 0.3s ease, filter 0.3s ease, transform 0.3s ease',
+              '&:hover': {
+                boxShadow: '0 2px 5px rgba(0,0,0,0.05)',
+                filter: 'drop-shadow(0 0 0px rgba(212,175,55,0))',
+                transform: 'translateY(2px)'
+              }
+            }}
           />
         </Grid>
       </Grid>
