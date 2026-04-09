@@ -9,7 +9,7 @@ const CustomSnackbar = ({ open, handleClose, message, severity = 'success' }) =>
       onClose={handleClose}
       anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
     >
-      <Alert onClose={handleClose} severity={severity} sx={{ width: '100%', bgcolor: severity === 'success' ? '#1A1A1A' : undefined, color: severity === 'success' ? '#D4AF37' : undefined, border: severity === 'success' ? '1px solid #D4AF37' : undefined }}>
+      <Alert onClose={handleClose} severity={severity} sx={{ width: '100%', bgcolor: severity === 'success' ? 'background.paper' : undefined, color: severity === 'success' ? '#D4AF37' : undefined, border: severity === 'success' ? '1px solid #D4AF37' : undefined }}>
         {message}
       </Alert>
     </Snackbar>

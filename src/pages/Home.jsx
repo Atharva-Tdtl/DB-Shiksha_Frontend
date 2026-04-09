@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Typography, Grid, Container } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import Hero from './HomeSections/Hero';
 import ProgramsPreview from './HomeSections/ProgramsPreview';
 import LearningPath from './HomeSections/LearningPath';
@@ -10,12 +11,14 @@ import ButtonPrimary from '../components/ButtonPrimary';
 import StarsIcon from '@mui/icons-material/Stars';
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <Box>
       <Hero />
       
       {/* Trust Section */}
-      <Box sx={{ bgcolor: '#1A1A1A', py: 4, textAlign: 'center', borderBottom: '1px solid rgba(212,175,55,0.1)' }}>
+      <Box sx={{ bgcolor: 'background.paper', py: 4, textAlign: 'center', borderBottom: '1px solid rgba(212,175,55,0.1)' }}>
         <Typography variant="body2" color="text.secondary" sx={{ mb: 2, textTransform: 'uppercase', letterSpacing: 2 }}>
           Trusted by leading organizations worldwide
         </Typography>
@@ -42,9 +45,33 @@ const Home = () => {
             <ButtonPrimary sx={{ mt: 2 }}>Learn More About Us</ButtonPrimary>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Box sx={{ position: 'relative', p: 2 }}>
-              <Box sx={{ position: 'absolute', top: 0, right: 0, width: '90%', height: '90%', border: '2px solid #D4AF37', borderRadius: 4, zIndex: 0 }} />
-              <Box component="img" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000" sx={{ width: '100%', borderRadius: 4, position: 'relative', zIndex: 1 }} />
+            <Box sx={{ 
+              width: '100%', 
+              maxWidth: 500, 
+              mx: 'auto', 
+              display: 'flex', 
+              justifyContent: 'center', 
+              alignItems: 'center',
+              overflow: 'hidden',
+              borderRadius: 5,
+              boxShadow: '0 15px 40px rgba(0, 0, 0, 0.1)',
+              transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+              '&:hover': {
+                transform: 'scale(1.02)',
+                boxShadow: '0 20px 50px rgba(0, 0, 0, 0.15)'
+              }
+            }}>
+              <Box 
+                component="img" 
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000" 
+                alt="education"
+                sx={{ 
+                  width: '100%', 
+                  height: 'auto', 
+                  display: 'block', 
+                  objectFit: 'cover' 
+                }} 
+              />
             </Box>
           </Grid>
         </Grid>
@@ -57,7 +84,7 @@ const Home = () => {
       <WhyChooseUs />
 
       {/* AI Test Section */}
-      <Box sx={{ py: 10, bgcolor: '#0D0D0D', textAlign: 'center', borderY: '1px solid rgba(212,175,55,0.1)' }}>
+      <Box sx={{ py: 10, bgcolor: 'background.default', textAlign: 'center', borderY: '1px solid rgba(212,175,55,0.1)' }}>
         <Container maxWidth="md">
           <StarsIcon sx={{ fontSize: 60, color: '#D4AF37', mb: 2 }} />
           <Typography variant="h3" sx={{ mb: 3 }}>Not sure where to start?</Typography>
@@ -71,7 +98,7 @@ const Home = () => {
       <Testimonials />
 
       {/* Corporate Section */}
-      <SectionWrapper id="corporate" bgcolor="#1A1A1A">
+      <SectionWrapper id="corporate" bgcolor="background.paper">
         <Grid container spacing={6} alignItems="center">
           <Grid item xs={12} md={6}>
             <Box
@@ -87,19 +114,19 @@ const Home = () => {
             <Typography variant="body1" color="text.secondary" sx={{ mb: 4, fontSize: '1.1rem' }}>
               Upskill your workforce with customized AI training programs tailored to your industry needs. From leadership workshops to deep technical dives.
             </Typography>
-            <ButtonPrimary size="large">Partner With Us</ButtonPrimary>
+            <ButtonPrimary size="large" onClick={() => navigate('/contact')}>Partner With Us</ButtonPrimary>
           </Grid>
         </Grid>
       </SectionWrapper>
 
       {/* Final CTA */}
-      <Box sx={{ py: 12, textAlign: 'center', background: 'radial-gradient(circle at center, rgba(212,175,55,0.15) 0%, rgba(13,13,13,1) 70%)' }}>
+      <Box sx={{ py: 12, textAlign: 'center', background: (theme) => `radial-gradient(circle at center, rgba(212,175,55,0.15) 0%, ${theme.palette.background.default} 70%)` }}>
         <Container maxWidth="md">
           <Typography variant="h2" sx={{ mb: 3, fontWeight: 800 }}>Join the AI Revolution</Typography>
           <Typography variant="h6" color="text.secondary" sx={{ mb: 5, maxWidth: 600, mx: 'auto' }}>
             Start your journey today and gain the skills that are redefining the global job market.
           </Typography>
-          <ButtonPrimary size="large" sx={{ py: 2, px: 8, fontSize: '1.25rem', boxShadow: '0 0 30px rgba(212,175,55,0.4)' }}>Enroll Now</ButtonPrimary>
+          <ButtonPrimary size="large" sx={{ py: 2, px: 8, fontSize: '1.25rem', boxShadow: '0 0 30px rgba(212,175,55,0.4)' }} onClick={() => navigate('/programs')}>Enroll Now</ButtonPrimary>
         </Container>
       </Box>
     </Box>
