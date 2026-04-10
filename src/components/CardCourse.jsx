@@ -58,16 +58,12 @@ const CardCourse = ({ id, title, image, price, level, category, description, dur
 
 
       <Box sx={{ px: 3, pb: 3 }}>
-        <ButtonPrimary fullWidth onClick={onClick || (() => navigate('/programs'))}>View Details</ButtonPrimary>
-
-      <Box sx={{ p: 2, pt: 0 }}>
         <ButtonPrimary 
           fullWidth 
-          onClick={onClick ? onClick : () => navigate('/programs')}
+          onClick={onClick || (() => navigate('/programs'))}
         >
           View Details
         </ButtonPrimary>
-
       </Box>
     </Card>
   );

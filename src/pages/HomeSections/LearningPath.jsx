@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Typography, Paper, Grid } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import SectionWrapper from '../../components/SectionWrapper';
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 import SchoolIcon from '@mui/icons-material/School';
@@ -14,12 +15,27 @@ const steps = [
 ];
 
 const LearningPath = () => {
+  const navigate = useNavigate();
   return (
     <SectionWrapper title="Your Learning Path" subtitle="A structured approach to transforming you into an AI expert.">
       <Grid container spacing={4}>
         {steps.map((step, index) => (
           <Grid item xs={12} sm={6} md={3} key={index}>
-            <Paper sx={{ p: 4, height: '100%', textAlign: 'center', transition: '0.3s', '&:hover': { borderColor: '#D4AF37', transform: 'translateY(-5px)' } }}>
+            <Paper 
+              onClick={() => index === 0 && navigate('/quiz')}
+              sx={{ 
+                p: 4, 
+                height: '100%', 
+                textAlign: 'center', 
+                transition: '0.3s', 
+                cursor: index === 0 ? 'pointer' : 'default',
+                '&:hover': { 
+                  borderColor: '#D4AF37', 
+                  transform: 'translateY(-5px)',
+                  bgcolor: index === 0 ? 'rgba(212,175,55,0.02)' : 'inherit'
+                } 
+              }}
+            >
               <Box sx={{ color: '#D4AF37', mb: 2 }}>{step.icon}</Box>
               <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>{step.title}</Typography>
               <Typography variant="body2" color="text.secondary">{step.desc}</Typography>

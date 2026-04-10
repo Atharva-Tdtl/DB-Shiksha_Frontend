@@ -9,8 +9,6 @@ import Logo from '../assets/DBShiksha-Logo.png';
 const Footer = () => {
   return (
 
-    <Box sx={{ bgcolor: 'background.paper', pt: 8, pb: 4, mt: 'auto', borderTop: '1px solid rgba(212, 175, 55, 0.1)' }}>
-
     <Box 
       sx={{ 
         bgcolor: 'background.paper', 
@@ -39,9 +37,7 @@ const Footer = () => {
               Empowering the next generation of AI leaders through industry-standard courses and hands-on learning.
             </Typography>
 
-            <Box sx={{ mt: 3 }}>
-
-            <Box sx={{ display: 'flex', gap: 1 }}>
+            <Box sx={{ mt: 3, display: 'flex', gap: 1 }}>
 
               <IconButton sx={{ color: 'text.primary', '&:hover': { color: '#D4AF37' } }}><FacebookIcon /></IconButton>
               <IconButton sx={{ color: 'text.primary', '&:hover': { color: '#D4AF37' } }}><TwitterIcon /></IconButton>
