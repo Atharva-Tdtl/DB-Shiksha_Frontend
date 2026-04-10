@@ -2,13 +2,10 @@ import React from 'react';
 import { Card, CardContent, CardMedia, Typography, Box, Chip } from '@mui/material';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import ButtonPrimary from './ButtonPrimary';
-
-
-const CardCourse = ({ title, image, price, level, category, onClick }) => {
-
 import { useNavigate } from 'react-router-dom';
 
-const CardCourse = ({ id, title, image, price, level, category, description, duration }) => {
+
+const CardCourse = ({ id, title, image, price, level, category, description, duration, onClick }) => {
   const navigate = useNavigate();
 
 
@@ -46,12 +43,8 @@ const CardCourse = ({ id, title, image, price, level, category, description, dur
         </Box>
       </CardContent>
 
-      <Box sx={{ p: 2, pt: 0 }}>
-        <ButtonPrimary fullWidth onClick={onClick}>View Details</ButtonPrimary>
-
       <Box sx={{ px: 3, pb: 3 }}>
-        <ButtonPrimary fullWidth onClick={() => navigate('/programs')}>View Details</ButtonPrimary>
-
+        <ButtonPrimary fullWidth onClick={onClick || (() => navigate('/programs'))}>View Details</ButtonPrimary>
       </Box>
     </Card>
   );

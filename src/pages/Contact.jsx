@@ -83,16 +83,6 @@ const Contact = () => {
           <Box sx={{ p: 3, bgcolor: 'background.paper', borderRadius: 2 }}>
             <Typography variant="h6" sx={{ mb: 2 }}>Follow Us</Typography>
             <Typography variant="body2" color="text.secondary">Stay updated with the latest in AI and our new program launches.</Typography>
-
-
-          <Box sx={{ p: 3, bgcolor: "background.paper", borderRadius: 2 }}>
-            <Typography variant="h6" sx={{ mb: 2 }}>
-              Follow Us
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Stay updated with the latest in AI and our new program launches.
-            </Typography>
-
           </Box>
         </Grid>
 
