@@ -17,7 +17,7 @@ export const fetchCourses = async (setLoading, setData, setError) => {
   try {
     setLoading(true);
     // Simulating API call
-    const res = await axios.get('https://api.example.com/courses'); 
+    const res = await axios.get('https://tdtlworld.com/db-shiksha-backend/api/courses/'); 
     setData(res.data);
   } catch (err) {
     console.error(err);
