@@ -42,7 +42,7 @@ const Home = () => {
             <Typography variant="body1" color="text.secondary" paragraph sx={{ fontSize: '1.1rem' }}>
               Our platform offers a blend of live mentorship, interactive sandboxes, and globally recognized certifications that make you job-ready from day one.
             </Typography>
-            <ButtonPrimary sx={{ mt: 2 }}>Learn More About Us</ButtonPrimary>
+            <ButtonPrimary sx={{ mt: 2 }} onClick={() => navigate('/about')}>Learn More About Us</ButtonPrimary>
           </Grid>
           <Grid item xs={12} md={6}>
             <Box sx={{ 
