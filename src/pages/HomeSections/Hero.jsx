@@ -1,4 +1,8 @@
+
 import React, { useEffect } from 'react';
+
+import React from 'react';
+
 import { Box, Typography, Grid } from '@mui/material';
 import ButtonPrimary from '../../components/ButtonPrimary';
 import SectionWrapper from '../../components/SectionWrapper';
@@ -43,7 +47,7 @@ const Hero = () => {
           </Typography>
           <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
             <ButtonPrimary size="large" sx={{ px: 4 }} onClick={() => navigate('/programs')}>Explore Programs</ButtonPrimary>
-            <ButtonPrimary variant="outlined" color="secondary" size="large" sx={{ px: 4, border: '1px solid rgba(255,255,255,0.3)' }} onClick={() => navigate('/programs')}>Take AI Test</ButtonPrimary>
+            <ButtonPrimary variant="outlined" color="secondary" size="large" sx={{ px: 4, border: '1px solid rgba(255,255,255,0.3)' }} onClick={() => navigate('/quiz')}>Take AI Test</ButtonPrimary>
           </Box>
         </Grid>
         <Grid item xs={12} md={6}>

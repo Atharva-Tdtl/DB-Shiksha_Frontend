@@ -1,31 +1,32 @@
 import React, { useState, useRef } from 'react';
-import { Container, Box, Snackbar, Alert, Paper, Typography, Button, Stack } from '@mui/material';
-import HeroSection from '../components/onboarding/HeroSection';
+
+import { Container, Box, Snackbar, Alert, Paper, Typography, Button } from '@mui/material';
+
+import { Container, Box, Snackbar, Alert, Paper, Typography, Button, Grid } from '@mui/material';
+import CardCourse from '../components/CardCourse';
+
 import RoleSelection from '../components/onboarding/RoleSelection';
+
 import SignupForm from '../components/onboarding/SignupForm';
 import Outcomes from '../components/onboarding/Outcomes';
 import PricingPreview from '../components/onboarding/PricingPreview';
 import TrustSection from '../components/onboarding/TrustSection';
 import CTASection from '../components/onboarding/CTASection';
 import BoltIcon from '@mui/icons-material/Bolt';
+import { Link as RouterLink } from 'react-router-dom';
 
 const Dashboard = () => {
+
+
   const [selectedRole, setSelectedRole] = useState(null);
+  const [value] = useState(0);
+
   const [snackbar, setSnackbar] = useState({ open: false, message: '', severity: 'success' });
   
   const signupRef = useRef(null);
 
   const scrollToSignup = () => {
     signupRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleRoleSelect = (role) => {
-    setSelectedRole(role);
-    setSnackbar({
-      open: true,
-      message: `Great! You've selected the ${role.charAt(0).toUpperCase() + role.slice(1)} track.`,
-      severity: 'success'
-    });
   };
 
   const handleCloseSnackbar = () => {
@@ -35,9 +36,6 @@ const Dashboard = () => {
   return (
     <Box sx={{ bgcolor: 'background.default', color: 'text.primary', minHeight: '100vh', pt: 8 }}>
       <Container maxWidth="lg">
-        {/* Role Selection (Tell us who you are) */}
-        <RoleSelection selectedRole={selectedRole} onSelect={handleRoleSelect} />
-
         {/* Signup Form Section */}
         <Box ref={signupRef} sx={{ py: 8 }}>
           <SignupForm />
@@ -67,6 +65,8 @@ const Dashboard = () => {
               variant="contained" 
               size="large" 
               startIcon={<BoltIcon />}
+              component={RouterLink}
+              to="/quiz"
               sx={{ px: 5, py: 1.5, fontWeight: 700 }}
             >
               Take Free AI Test
@@ -82,14 +82,7 @@ const Dashboard = () => {
         <TrustSection />
       </Container>
 
-      {value === 0 && (
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={4}>
-            <CardCourse title="Generative AI Masterclass" price="Completed" category="AI" level="Advanced" image="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=600" />
-          </Grid>
-          {/* More courses */}
-        </Grid>
-      )}
+
 
 
       {/* Final CTA */}
