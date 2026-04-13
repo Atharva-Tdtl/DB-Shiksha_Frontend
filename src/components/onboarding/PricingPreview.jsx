@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Typography, Grid, Card, CardContent, Divider, Stack } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import ButtonPrimary from '../ButtonPrimary';
 
 const plans = [
@@ -9,6 +10,8 @@ const plans = [
 ];
 
 const PricingPreview = () => {
+  const navigate = useNavigate();
+  
   return (
     <Box sx={{ py: 8 }}>
       <Typography variant="h4" sx={{ textAlign: 'center', mb: 2, fontWeight: 700 }}>
@@ -62,7 +65,11 @@ const PricingPreview = () => {
                     </Typography>
                   ))}
                 </Stack>
-                <ButtonPrimary fullWidth variant={plan.popular ? 'contained' : 'outlined'}>
+                <ButtonPrimary 
+                  fullWidth 
+                  variant={plan.popular ? 'contained' : 'outlined'}
+                  onClick={() => navigate('/programs')}
+                >
                   Select Plan
                 </ButtonPrimary>
               </CardContent>
