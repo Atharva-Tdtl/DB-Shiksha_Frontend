@@ -12,7 +12,7 @@ import {
 const Enterprise = () => {
   return (
     <Box sx={{ bgcolor: "background.default", color: "text.primary", minHeight: "100vh", py: 8 }}>
-      <Container maxWidth="lg">
+      <Container maxWidth={false} sx={{ px: { xs: 2, md: 4, lg: 6 } }}>
         {/* Hero Section */}
         <Box sx={{ textAlign: "center", mb: 8, mt: 4 }}>
           <Typography

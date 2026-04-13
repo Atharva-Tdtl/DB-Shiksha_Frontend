@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Box, Container, Typography, Grid, Paper, List, ListItem, ListItemIcon, ListItemText, Accordion, AccordionSummary, AccordionDetails, Divider } from '@mui/material';
+import { Box, Container, Typography, Grid, Paper, List, ListItem, ListItemIcon, ListItemText, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import SectionWrapper from '../components/SectionWrapper';

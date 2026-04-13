@@ -1,15 +1,10 @@
 import React from "react";
 import {
   Box,
-  Typography,
-  Button,
   Container,
   useTheme,
   keyframes,
-  Stack,
 } from "@mui/material";
-import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
-import ExploreIcon from "@mui/icons-material/Explore";
 
 const pulse = keyframes`
   0% { transform: scale(1); opacity: 0.5; }

@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
-import { Container, Box, Snackbar, Alert, Paper, Typography, Button, Stack } from '@mui/material';
-import HeroSection from '../components/onboarding/HeroSection';
+import { Container, Box, Snackbar, Alert, Paper, Typography, Button, Grid } from '@mui/material';
+import CardCourse from '../components/CardCourse';
+
 import RoleSelection from '../components/onboarding/RoleSelection';
 import SignupForm from '../components/onboarding/SignupForm';
 import Outcomes from '../components/onboarding/Outcomes';
@@ -8,9 +9,11 @@ import PricingPreview from '../components/onboarding/PricingPreview';
 import TrustSection from '../components/onboarding/TrustSection';
 import CTASection from '../components/onboarding/CTASection';
 import BoltIcon from '@mui/icons-material/Bolt';
+import { Link as RouterLink } from 'react-router-dom';
 
 const Dashboard = () => {
   const [selectedRole, setSelectedRole] = useState(null);
+  const [value] = useState(0);
   const [snackbar, setSnackbar] = useState({ open: false, message: '', severity: 'success' });
   
   const signupRef = useRef(null);
@@ -67,6 +70,8 @@ const Dashboard = () => {
               variant="contained" 
               size="large" 
               startIcon={<BoltIcon />}
+              component={RouterLink}
+              to="/quiz"
               sx={{ px: 5, py: 1.5, fontWeight: 700 }}
             >
               Take Free AI Test

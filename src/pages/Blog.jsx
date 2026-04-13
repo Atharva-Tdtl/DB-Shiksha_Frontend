@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { 
   Box, Typography, Grid, Container, Paper, Stack, Chip, Card, CardContent, CardMedia, 
   useTheme, TextField, Button, Dialog, DialogTitle, DialogContent, IconButton, Divider,
-  Fade, Zoom, Alert, Snackbar
+  Fade, Zoom
 } from '@mui/material';
 import { jsPDF } from "jspdf";
 import SectionWrapper from '../components/SectionWrapper';
