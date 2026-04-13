@@ -89,9 +89,13 @@ const Home = () => {
               sandboxes, and globally recognized certifications that make you
               job-ready from day one.
             </Typography>
+
+            <ButtonPrimary sx={{ mt: 2 }} onClick={() => navigate('/about')}>Learn More About Us</ButtonPrimary>
+
             <ButtonPrimary onClick={() => navigate("/about")} sx={{ mt: 2 }}>
               Learn More About Us
             </ButtonPrimary>
+
           </Grid>
           <Grid item xs={12} md={6}>
             <Box
