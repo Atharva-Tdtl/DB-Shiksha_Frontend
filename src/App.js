@@ -21,9 +21,7 @@ import Contact from './pages/Contact';
 
 // import Certifications from './pages/Certifications';
 import Enterprise from './pages/Enterprise';
-
-
-
+import CourseSelection from './pages/CourseSelection';
 function App() {
   return (
     <ThemeContextProvider>
@@ -41,6 +39,7 @@ function App() {
               <Route path="/careers" element={<Careers />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/select-course" element={<CourseSelection />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/enterprise" element={<Enterprise />} />
