@@ -2,14 +2,28 @@ import React from 'react';
 import { Card, CardContent, CardMedia, Typography, Box, Chip } from '@mui/material';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import ButtonPrimary from './ButtonPrimary';
-
 import { useNavigate } from 'react-router-dom';
 
-const CardCourse = ({ id, title, image, price, level, category, description, duration }) => {
+
+const CardCourse = ({ id, title, image, price, level, category, description, duration, onClick }) => {
   const navigate = useNavigate();
 
   return (
-    <Card className="card" sx={{ height: '100%', display: 'flex', flexDirection: 'column', borderRadius: 3, boxShadow: '0 4px 12px rgba(0,0,0,0.1)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', '&:hover': { transform: 'translateY(-8px)', boxShadow: '0 12px 24px rgba(212, 175, 55, 0.2)' } }}>
+    <Card 
+      className="card" 
+      sx={{ 
+        height: '100%', 
+        display: 'flex', 
+        flexDirection: 'column', 
+        borderRadius: 3, 
+        boxShadow: '0 4px 12px rgba(0,0,0,0.1)', 
+        transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
+        '&:hover': { 
+          transform: 'translateY(-8px)', 
+          boxShadow: '0 12px 24px rgba(212, 175, 55, 0.2)' 
+        } 
+      }}
+    >
       <CardMedia
         component="img"
         height="200"
@@ -41,8 +55,19 @@ const CardCourse = ({ id, title, image, price, level, category, description, dur
           </Typography>
         </Box>
       </CardContent>
+
+
       <Box sx={{ px: 3, pb: 3 }}>
-        <ButtonPrimary fullWidth onClick={() => navigate('/programs')}>View Details</ButtonPrimary>
+        <ButtonPrimary fullWidth onClick={onClick || (() => navigate('/programs'))}>View Details</ButtonPrimary>
+
+      <Box sx={{ p: 2, pt: 0 }}>
+        <ButtonPrimary 
+          fullWidth 
+          onClick={onClick ? onClick : () => navigate('/programs')}
+        >
+          View Details
+        </ButtonPrimary>
+
       </Box>
     </Card>
   );
