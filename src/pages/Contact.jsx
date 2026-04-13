@@ -79,6 +79,8 @@ const Contact = () => {
             </Box>
           </Box>
 
+
+          
           <Box sx={{ p: 3, bgcolor: "background.paper", borderRadius: 2 }}>
             <Typography variant="h6" sx={{ mb: 2 }}>
               Follow Us

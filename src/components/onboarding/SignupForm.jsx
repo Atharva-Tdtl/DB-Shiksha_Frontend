@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import {
   Box,
@@ -22,6 +23,17 @@ import {
   requestOtp,
   verifyOtp,
 } from "../../services/authService";
+
+import React, { useState } from 'react';
+import { 
+  Box, TextField, Button, Typography, Grid, MenuItem, 
+  CircularProgress, InputAdornment, IconButton 
+} from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
+import Swal from 'sweetalert2';
+import { registerUser } from '../../services/authService';
+
 
 const SignupForm = () => {
   const navigate = useNavigate();

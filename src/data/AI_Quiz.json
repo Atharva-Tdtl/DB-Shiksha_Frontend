@@ -1,0 +1,607 @@
+{
+  "quiz_title": "DBShiksha AI Readiness Test",
+  "description": "50 medium-to-hard questions covering AI concepts, tools, applications, and strategy.",
+  "total_questions": 50,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which of the following best describes the difference between supervised and unsupervised learning?",
+      "options": {
+        "A": "Supervised learning uses more GPUs than unsupervised learning",
+        "B": "Supervised learning is only used for image recognition tasks",
+        "C": "Supervised learning uses labeled data; unsupervised learning finds patterns in unlabeled data",
+        "D": "Supervised learning works without any data; unsupervised learning requires large datasets"
+      },
+      "answer": "C",
+      "category": "AI Fundamentals"
+    },
+    {
+      "id": 2,
+      "question": "What is 'hallucination' in the context of Large Language Models (LLMs)?",
+      "options": {
+        "A": "When the model processes images instead of text",
+        "B": "When the model generates confident but factually incorrect or fabricated information",
+        "C": "When the model takes too long to respond due to server overload",
+        "D": "When the model refuses to answer sensitive questions"
+      },
+      "answer": "B",
+      "category": "AI Concepts"
+    },
+    {
+      "id": 3,
+      "question": "In prompt engineering, what does 'few-shot prompting' mean?",
+      "options": {
+        "A": "Using short prompts to reduce token costs",
+        "B": "Providing the model with a small number of input-output examples before your actual query",
+        "C": "Limiting the number of API calls made per minute",
+        "D": "Running the model on low-powered hardware with minimal resources"
+      },
+      "answer": "B",
+      "category": "Prompt Engineering"
+    },
+    {
+      "id": 4,
+      "question": "Which metric is most appropriate to evaluate a classification model when the dataset is highly imbalanced?",
+      "options": {
+        "A": "F1 Score",
+        "B": "R-squared",
+        "C": "Mean Squared Error",
+        "D": "Overall Accuracy"
+      },
+      "answer": "A",
+      "category": "AI/ML Evaluation"
+    },
+    {
+      "id": 5,
+      "question": "What is Retrieval-Augmented Generation (RAG) primarily used for?",
+      "options": {
+        "A": "Enhancing LLM responses by fetching relevant external knowledge at inference time",
+        "B": "Generating synthetic training datasets from scratch",
+        "C": "Training a brand new AI model on private company data",
+        "D": "Reducing the physical size of neural network hardware"
+      },
+      "answer": "A",
+      "category": "AI Applications"
+    },
+    {
+      "id": 6,
+      "question": "Which of the following is NOT a real application of AI in marketing?",
+      "options": {
+        "A": "AI-generated ad copy using language models",
+        "B": "Predictive customer churn analysis",
+        "C": "Personalized product recommendations",
+        "D": "Automatic physical manufacturing of marketing banners"
+      },
+      "answer": "D",
+      "category": "AI for Business"
+    },
+    {
+      "id": 7,
+      "question": "What does 'fine-tuning' an AI model mean?",
+      "options": {
+        "A": "Writing better prompts to improve model output quality",
+        "B": "Adjusting hardware settings for better GPU performance",
+        "C": "Re-training a pre-trained model on a smaller domain-specific dataset",
+        "D": "Deleting irrelevant layers from an existing neural network"
+      },
+      "answer": "C",
+      "category": "AI Concepts"
+    },
+    {
+      "id": 8,
+      "question": "Which cloud provider offers the AI and ML service called 'SageMaker'?",
+      "options": {
+        "A": "Amazon Web Services (AWS)",
+        "B": "Google Cloud Platform",
+        "C": "Microsoft Azure",
+        "D": "IBM Cloud"
+      },
+      "answer": "A",
+      "category": "AI Tools & Platforms"
+    },
+    {
+      "id": 9,
+      "question": "In the context of AI automation, what is an 'AI Agent'?",
+      "options": {
+        "A": "A hardware component that speeds up AI computations",
+        "B": "A customer service representative trained in using AI tools",
+        "C": "An AI system that can autonomously plan and execute multi-step tasks using external tools",
+        "D": "A chatbot that only handles predefined FAQ responses"
+      },
+      "answer": "C",
+      "category": "Agentic AI"
+    },
+    {
+      "id": 10,
+      "question": "What is the primary role of the 'transformer' architecture in modern AI models?",
+      "options": {
+        "A": "It converts images to text automatically in real time",
+        "B": "It uses self-attention mechanisms to understand relationships across all parts of input data simultaneously",
+        "C": "It physically transforms hardware to process data faster",
+        "D": "It transforms structured data into unstructured data for analysis"
+      },
+      "answer": "B",
+      "category": "AI Fundamentals"
+    },
+    {
+      "id": 11,
+      "question": "Which of the following best defines 'AI bias'?",
+      "options": {
+        "A": "The time delay in AI model responses under heavy load",
+        "B": "The preference of AI models for numerical data over text data",
+        "C": "Systematic errors in AI outputs caused by flawed or unrepresentative training data",
+        "D": "The tendency of AI models to prefer certain programming languages"
+      },
+      "answer": "C",
+      "category": "AI Ethics"
+    },
+    {
+      "id": 12,
+      "question": "Why is a GPU critical for deep learning model training?",
+      "options": {
+        "A": "GPUs connect AI models directly to the internet for faster data fetching",
+        "B": "GPUs have parallel processing architecture that accelerates matrix computations used in deep learning",
+        "C": "GPUs handle all general-purpose computer operations efficiently",
+        "D": "GPUs write AI code automatically without human input"
+      },
+      "answer": "B",
+      "category": "AI Infrastructure"
+    },
+    {
+      "id": 13,
+      "question": "Which of the following is the best example of 'Generative AI'?",
+      "options": {
+        "A": "A spam filter that classifies incoming emails as spam or not spam",
+        "B": "DALL-E generating original images from text descriptions",
+        "C": "A fraud detection system that flags suspicious transactions",
+        "D": "A recommendation engine that ranks products by purchase history"
+      },
+      "answer": "B",
+      "category": "Generative AI"
+    },
+    {
+      "id": 14,
+      "question": "What is 'transfer learning' in AI?",
+      "options": {
+        "A": "Applying knowledge from training on one task to improve performance on a different but related task",
+        "B": "Moving an AI model from one cloud server to another",
+        "C": "Converting a model from one programming language to another",
+        "D": "Transferring user data between two separate AI systems"
+      },
+      "answer": "A",
+      "category": "AI Concepts"
+    },
+    {
+      "id": 15,
+      "question": "In data analytics, what does 'data normalization' primarily achieve?",
+      "options": {
+        "A": "It organizes all data records into alphabetical order",
+        "B": "It permanently removes all outliers from the dataset",
+        "C": "It converts all data types to integer format for processing",
+        "D": "It scales features to a standard range to prevent any single variable from dominating model training"
+      },
+      "answer": "D",
+      "category": "Data Analytics"
+    },
+    {
+      "id": 16,
+      "question": "What is the key distinction between Artificial Intelligence and Machine Learning?",
+      "options": {
+        "A": "AI is outdated technology that ML has completely replaced",
+        "B": "AI is only for robotics applications; ML is exclusively for software",
+        "C": "AI requires constant human supervision; ML operates fully autonomously",
+        "D": "AI is a broader field of building intelligent systems; ML is a specific subset where systems learn patterns from data"
+      },
+      "answer": "D",
+      "category": "AI Fundamentals"
+    },
+    {
+      "id": 17,
+      "question": "Which Python framework is most widely used for building and training deep learning models?",
+      "options": {
+        "A": "PyTorch or TensorFlow",
+        "B": "Matplotlib",
+        "C": "NumPy",
+        "D": "Pandas"
+      },
+      "answer": "A",
+      "category": "AI Tools & Platforms"
+    },
+    {
+      "id": 18,
+      "question": "What is 'overfitting' in a machine learning model?",
+      "options": {
+        "A": "When the model uses too many GPUs and consumes excessive energy",
+        "B": "When the model performs well on training data but poorly on new, unseen data",
+        "C": "When the model is too simple and fails to capture any meaningful patterns",
+        "D": "When the model takes too long to complete its training process"
+      },
+      "answer": "B",
+      "category": "AI/ML Evaluation"
+    },
+    {
+      "id": 19,
+      "question": "Which of the following is a well-known current limitation of AI language models?",
+      "options": {
+        "A": "Translating content between major languages",
+        "B": "Writing grammatically correct and coherent sentences",
+        "C": "Reliably performing complex real-time mathematical calculations without errors",
+        "D": "Summarizing long documents into shorter paragraphs"
+      },
+      "answer": "C",
+      "category": "AI Concepts"
+    },
+    {
+      "id": 20,
+      "question": "What does 'NLP' stand for and what is its primary focus in AI?",
+      "options": {
+        "A": "Natural Language Processing; enabling machines to understand and generate human language",
+        "B": "Numeric Logic Programming; focused on mathematical computation tasks",
+        "C": "Network Latency Protocol; focused on reducing AI response time",
+        "D": "Neural Learning Protocol; focused on hardware optimization for AI"
+      },
+      "answer": "A",
+      "category": "AI Fundamentals"
+    },
+    {
+      "id": 21,
+      "question": "In building an AI strategy for a business, what should be the FIRST step?",
+      "options": {
+        "A": "Hire a full team of data scientists and ML engineers immediately",
+        "B": "Purchase the most advanced AI software licence available in the market",
+        "C": "Build a fully custom AI model from scratch using internal data",
+        "D": "Identify and clearly define the specific business problem AI is meant to solve"
+      },
+      "answer": "D",
+      "category": "AI Strategy"
+    },
+    {
+      "id": 22,
+      "question": "What is 'Computer Vision' in AI?",
+      "options": {
+        "A": "Software that enhances and improves monitor display quality",
+        "B": "A field of AI that enables machines to interpret and understand visual data such as images and video",
+        "C": "A tool used to monitor computer network traffic visually",
+        "D": "The ability of computers to display high-resolution 3D graphics in real time"
+      },
+      "answer": "B",
+      "category": "AI Applications"
+    },
+    {
+      "id": 23,
+      "question": "Which of the following is a valid and accurate use case of AI in cybersecurity?",
+      "options": {
+        "A": "Using physical AI robots to guard server rooms",
+        "B": "Manually reviewing each network log with AI assistance",
+        "C": "Using AI models to detect anomalous network behavior and predict cyber threats in real time",
+        "D": "Replacing all human security professionals with fully automated AI systems"
+      },
+      "answer": "C",
+      "category": "AI Applications"
+    },
+    {
+      "id": 24,
+      "question": "What does 'tokenization' mean in the context of Large Language Models?",
+      "options": {
+        "A": "Awarding digital certificates and badges to trained AI models",
+        "B": "Converting AI output into financial tokens for blockchain transactions",
+        "C": "Encrypting user data before it is sent to the AI model for privacy",
+        "D": "Splitting input text into smaller units called tokens that the model can process numerically"
+      },
+      "answer": "D",
+      "category": "AI Concepts"
+    },
+    {
+      "id": 25,
+      "question": "What is the main purpose of an 'AI Readiness Assessment' for an organization?",
+      "options": {
+        "A": "To check whether the company's internet connection is fast enough for AI tools",
+        "B": "To measure how quickly employees can learn to code AI models",
+        "C": "To test whether the company's existing computers can run AI software",
+        "D": "To evaluate the organization's data, skills, culture, and infrastructure before adopting AI at scale"
+      },
+      "answer": "D",
+      "category": "AI Strategy"
+    },
+    {
+      "id": 26,
+      "question": "Which of the following best describes 'Reinforcement Learning'?",
+      "options": {
+        "A": "Learning by copying the exact behavior patterns of human domain experts",
+        "B": "Learning by finding hidden clusters and patterns in completely unlabeled data",
+        "C": "Learning through trial and error using rewards and penalties for actions taken",
+        "D": "Learning exclusively from large datasets of pre-labeled training examples"
+      },
+      "answer": "C",
+      "category": "AI Fundamentals"
+    },
+    {
+      "id": 27,
+      "question": "What is 'MLOps' in the AI industry?",
+      "options": {
+        "A": "A type of neural network architecture used in image processing",
+        "B": "A marketing and sales strategy for AI-based products",
+        "C": "A set of practices combining ML development and IT operations to reliably deploy and maintain models in production",
+        "D": "A programming language specifically designed for writing ML algorithms"
+      },
+      "answer": "C",
+      "category": "AI Infrastructure"
+    },
+    {
+      "id": 28,
+      "question": "Which of the following is the most significant challenge in deploying AI across rural India?",
+      "options": {
+        "A": "AI models not being powerful enough to handle rural use cases",
+        "B": "Limited digital infrastructure, low AI literacy, and language diversity barriers",
+        "C": "Excess availability of high-speed internet making AI too accessible in rural areas",
+        "D": "An overabundance of AI-trained professionals avoiding urban areas"
+      },
+      "answer": "B",
+      "category": "AI for Bharat"
+    },
+    {
+      "id": 29,
+      "question": "What is 'Explainable AI' (XAI)?",
+      "options": {
+        "A": "A simplified beginner-friendly version of AI tools and platforms",
+        "B": "AI techniques designed to make model decisions transparent and understandable to humans",
+        "C": "AI systems that can explain jokes, humor, and cultural references to users",
+        "D": "An AI tool that automatically generates technical documentation for code"
+      },
+      "answer": "B",
+      "category": "AI Ethics"
+    },
+    {
+      "id": 30,
+      "question": "In AI product development, what is a 'Minimum Viable AI Product' (MVAP)?",
+      "options": {
+        "A": "The cheapest AI product currently available in the consumer market",
+        "B": "An AI model trained using the minimum possible amount of data",
+        "C": "A product that uses AI only for minor, non-critical background tasks",
+        "D": "An AI-powered product with the minimum features needed to test core assumptions and collect user feedback"
+      },
+      "answer": "D",
+      "category": "AI Strategy"
+    },
+    {
+      "id": 31,
+      "question": "Which tool is specifically designed for AI-powered workflow automation without writing code?",
+      "options": {
+        "A": "Docker",
+        "B": "TensorFlow",
+        "C": "Jupyter Notebook",
+        "D": "Zapier with AI integrations or Make (formerly Integromat)"
+      },
+      "answer": "D",
+      "category": "AI Tools & Platforms"
+    },
+    {
+      "id": 32,
+      "question": "What is the key difference between 'AI automation' and 'AI augmentation'?",
+      "options": {
+        "A": "Automation uses deep learning only; augmentation uses rule-based systems only",
+        "B": "Automation is used only in manufacturing; augmentation is used only in software",
+        "C": "Automation completely removes human tasks; augmentation enhances human capabilities with AI assistance",
+        "D": "Automation is expensive and complex; augmentation is always free and simple"
+      },
+      "answer": "C",
+      "category": "AI Applications"
+    },
+    {
+      "id": 33,
+      "question": "What does 'data privacy' mean specifically in the context of AI systems?",
+      "options": {
+        "A": "Making all AI models fully open source and publicly available",
+        "B": "Keeping AI model architecture and weights secret from business competitors",
+        "C": "Ensuring personal data used to train or operate AI is collected, stored, and used ethically and legally",
+        "D": "Restricting access to all AI tools to prevent any potential misuse"
+      },
+      "answer": "C",
+      "category": "AI Ethics"
+    },
+    {
+      "id": 34,
+      "question": "Which of the following best describes the 'context window' of a Large Language Model?",
+      "options": {
+        "A": "The graphical user interface that appears when the model is actively running",
+        "B": "The full version history of all the model's software updates",
+        "C": "The time period during which the model was originally trained on data",
+        "D": "The maximum amount of text (in tokens) the model can process and retain in a single interaction"
+      },
+      "answer": "D",
+      "category": "AI Concepts"
+    },
+    {
+      "id": 35,
+      "question": "For a business leader evaluating an AI tool, which factor is MOST critical for measuring ROI?",
+      "options": {
+        "A": "Whether the tool is built on the most advanced and latest AI model available",
+        "B": "The tool's ability to reduce measurable costs or generate quantifiable revenue relative to its implementation cost",
+        "C": "The quality and attractiveness of the tool's user interface design",
+        "D": "The AI vendor company's social media following and brand reputation"
+      },
+      "answer": "B",
+      "category": "AI Strategy"
+    },
+    {
+      "id": 36,
+      "question": "What is 'multimodal AI'?",
+      "options": {
+        "A": "AI that can only be accessed through multiple different devices simultaneously",
+        "B": "AI that supports communication in multiple human spoken languages",
+        "C": "AI that uses multiple data center servers to distribute processing load",
+        "D": "AI that can process and generate multiple types of data such as text, images, audio, and video"
+      },
+      "answer": "D",
+      "category": "AI Concepts"
+    },
+    {
+      "id": 37,
+      "question": "Which foundational skill is most important before advancing to building custom AI models?",
+      "options": {
+        "A": "Advanced cloud computing infrastructure and server management",
+        "B": "Expertise in semiconductor and hardware engineering",
+        "C": "Proficiency in graphic design and data visualization aesthetics",
+        "D": "Understanding and applying statistics and data analysis"
+      },
+      "answer": "D",
+      "category": "AI Learning"
+    },
+    {
+      "id": 38,
+      "question": "What is 'vector embedding' in the context of AI and NLP?",
+      "options": {
+        "A": "Representing words, sentences, or data as numerical vectors that capture semantic meaning",
+        "B": "A security encryption method specifically designed for AI model weights",
+        "C": "Embedding AI processing chips into consumer physical products",
+        "D": "A method of compressing large video files using AI algorithms"
+      },
+      "answer": "A",
+      "category": "AI Concepts"
+    },
+    {
+      "id": 39,
+      "question": "Which statement about AI in government services is most accurate?",
+      "options": {
+        "A": "AI is exclusively useful in government only for national defense applications",
+        "B": "AI cannot be used in government due to strict data privacy and security regulations",
+        "C": "AI can improve citizen services through chatbots and fraud detection while requiring strong governance frameworks",
+        "D": "AI can replace all government officials to dramatically reduce operational costs"
+      },
+      "answer": "C",
+      "category": "AI for Government"
+    },
+    {
+      "id": 40,
+      "question": "What does 'model drift' mean in a deployed AI system?",
+      "options": {
+        "A": "The model gradually becoming faster over time due to incremental hardware upgrades",
+        "B": "The model physically migrating to a different geographical server location",
+        "C": "The gradual degradation in model performance as real-world data patterns diverge from training data",
+        "D": "The model switching its output language based on changing user demographics"
+      },
+      "answer": "C",
+      "category": "AI Infrastructure"
+    },
+    {
+      "id": 41,
+      "question": "What is the smartest first approach for an MSME to adopt AI with minimal upfront investment?",
+      "options": {
+        "A": "Start with AI-powered SaaS tools and APIs that solve specific problems, then scale based on results",
+        "B": "Immediately purchase an enterprise-level AI licence for all departments",
+        "C": "Wait until AI technology costs come down significantly before making any adoption decisions",
+        "D": "Build a fully custom AI model in-house with a dedicated internal data science team"
+      },
+      "answer": "A",
+      "category": "AI for Business"
+    },
+    {
+      "id": 42,
+      "question": "In generative AI, what does the 'temperature' parameter control?",
+      "options": {
+        "A": "The number of output tokens the model generates per second",
+        "B": "The physical heat generated by the GPU during intensive AI processing",
+        "C": "The randomness or creativity of the model's output \u2014 higher values produce more varied responses",
+        "D": "The speed at which the model generates and streams its responses"
+      },
+      "answer": "C",
+      "category": "Generative AI"
+    },
+    {
+      "id": 43,
+      "question": "What is the primary risk of deploying a biased AI model in a corporate hiring process?",
+      "options": {
+        "A": "The model will systematically discriminate against candidates based on protected characteristics like race or gender",
+        "B": "The model will process job applications too slowly to be practical",
+        "C": "The model will only select candidates who demand the highest salaries",
+        "D": "The model will automatically reject all applications without any human review"
+      },
+      "answer": "A",
+      "category": "AI Ethics"
+    },
+    {
+      "id": 44,
+      "question": "Which of the following correctly describes 'zero-shot learning' in AI?",
+      "options": {
+        "A": "A model's ability to perform a task it was never explicitly trained on by leveraging general knowledge",
+        "B": "A model that scores zero percent accuracy on any completely new task",
+        "C": "Learning that is performed without requiring any computational processing resources",
+        "D": "Training an AI model using zero data points from scratch"
+      },
+      "answer": "A",
+      "category": "AI Concepts"
+    },
+    {
+      "id": 45,
+      "question": "For AI-driven digital marketing, which KPI is most important when evaluating an AI personalization engine?",
+      "options": {
+        "A": "The number of AI API calls made per day by the engine",
+        "B": "Conversion rate lift and improvement in customer lifetime value",
+        "C": "The social media following and public reputation of the AI vendor",
+        "D": "The size and complexity of the underlying AI model used"
+      },
+      "answer": "B",
+      "category": "AI for Business"
+    },
+    {
+      "id": 46,
+      "question": "What is a 'knowledge graph' in the context of AI systems?",
+      "options": {
+        "A": "A visual performance chart showing an AI model's training accuracy over time",
+        "B": "A structured representation of entities and their real-world relationships used to enhance AI reasoning",
+        "C": "A network diagram showing the physical connections between AI hardware components",
+        "D": "A graph tracking the learning progress and scores of individual students in an LMS"
+      },
+      "answer": "B",
+      "category": "AI Concepts"
+    },
+    {
+      "id": 47,
+      "question": "Which component is most critical for a successful large-scale AI implementation in an enterprise?",
+      "options": {
+        "A": "Deploying the most computationally advanced and latest AI model available",
+        "B": "High-quality, well-governed, and domain-relevant data",
+        "C": "Allocating the largest possible IT infrastructure budget for the project",
+        "D": "Rolling out AI tools across all departments simultaneously for maximum impact"
+      },
+      "answer": "B",
+      "category": "AI Strategy"
+    },
+    {
+      "id": 48,
+      "question": "What does 'RLHF' stand for and why is it significant in AI development?",
+      "options": {
+        "A": "Reinforcement Learning from Human Feedback; used to align AI model behavior with human values and preferences",
+        "B": "Real-time Language Handling Framework; used to process multilingual user queries",
+        "C": "Randomized Learning for Human Features; used to generate realistic synthetic training data",
+        "D": "Recursive Loop for Human Feedback; used primarily to speed up deep learning training cycles"
+      },
+      "answer": "A",
+      "category": "AI Concepts"
+    },
+    {
+      "id": 49,
+      "question": "What is the main advantage of using cloud-based AI services over building on-premise AI infrastructure?",
+      "options": {
+        "A": "Cloud AI offers scalability, lower upfront costs, and access to state-of-the-art models without managing hardware",
+        "B": "Cloud AI provides absolute 100% data privacy and regulatory compliance guarantees",
+        "C": "Cloud AI completely eliminates the need for any internal AI knowledge or expertise",
+        "D": "Cloud AI services always produce significantly more accurate results than local models"
+      },
+      "answer": "A",
+      "category": "AI Infrastructure"
+    },
+    {
+      "id": 50,
+      "question": "Which statement best describes the future role of AI in India's workforce based on emerging global trends?",
+      "options": {
+        "A": "AI will completely eliminate all job categories across India within the next five years",
+        "B": "AI will have minimal long-term impact on India due to the country's large manual and agrarian workforce",
+        "C": "AI will only significantly affect white-collar IT sector jobs and leave other sectors untouched",
+        "D": "AI will augment most roles while creating new job categories, making AI literacy and reskilling urgently necessary"
+      },
+      "answer": "D",
+      "category": "AI for Bharat"
+    }
+  ]
+}
