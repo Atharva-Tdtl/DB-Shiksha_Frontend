@@ -29,6 +29,7 @@ import CardCourse from "../components/CardCourse";
 import Loader from "../components/Loader";
 import ButtonPrimary from "../components/ButtonPrimary";
 import EmptyState from "../components/EmptyState";
+import { fetchCourses } from "../services/courseService";
 
 const Programs = () => {
   const [loading, setLoading] = useState(true);
@@ -37,9 +38,31 @@ const Programs = () => {
   const [selectedCourse, setSelectedCourse] = useState(null);
   const [open, setOpen] = useState(false);
 
+  const [coursesData, setCoursesData] = useState([]);
+
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1000);
-    return () => clearTimeout(timer);
+    const loadData = async () => {
+      await fetchCourses(setLoading, (data) => {
+        const transformedData = data.map(course => ({
+          ...course,
+          image: course.thumbnail || "https://images.unsplash.com/photo-1485083233855-313b198c97e2?w=800&auto=format&fit=crop",
+          category: course.title.toLowerCase().includes("student") ? "AI for Students" : 
+                    course.title.toLowerCase().includes("professional") ? "AI for Professionals" : 
+                    course.title.toLowerCase().includes("business") || course.title.toLowerCase().includes("leader") ? "AI for Business Leaders" : 
+                    course.title.toLowerCase().includes("advanced") || course.title.toLowerCase().includes("expert") ? "Advanced AI Programs" : "AI for Everyone",
+          role: course.title.toLowerCase().includes("student") ? "Students" : 
+                course.title.toLowerCase().includes("professional") ? "Working Professionals" : 
+                course.title.toLowerCase().includes("leader") ? "Executives" : "General Users",
+          level: "Beginner",
+          duration: "4 Weeks",
+          tools: [],
+          outcomes: ["Understand AI concepts", "Use AI tools daily"],
+          fullDescription: course.description
+        }));
+        setCoursesData(transformedData);
+      });
+    };
+    loadData();
   }, []);
 
   const handleTabChange = (event, newValue) => {
@@ -60,203 +83,6 @@ const Programs = () => {
     setSearchQuery("");
   };
 
-  const coursesData = [
-    {
-      id: 1,
-      title: "AI Foundations for Everyone",
-      category: "AI for Everyone",
-      role: "Beginner",
-      description:
-        "Understand AI basics, tools, and real-world applications without coding.",
-      fullDescription:
-        "This program provides a comprehensive entry point into the world of Artificial Intelligence. Participants will explore the history of AI, different types of machine learning, and how AI is currently reshaping various sectors like healthcare, finance, and entertainment. No prior technical background is required.",
-      price: 1999,
-      image:
-        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop",
-      level: "Beginner",
-      duration: "4 Weeks",
-      tools: ["ChatGPT", "Canva AI"],
-      outcomes: ["Understand AI concepts", "Use AI tools daily"],
-    },
-    {
-      id: 2,
-      title: "AI Productivity Mastery",
-      category: "AI for Everyone",
-      role: "General Users",
-      description:
-        "Boost daily productivity using AI tools like ChatGPT and automation.",
-      fullDescription:
-        "Master the art of prompt engineering and workflow automation to reclaim hours of your day. This course focuses on practical applications of LLMs and integrated tools to streamline document creation, email management, and research, making you a more effective professional in the modern digital landscape.",
-      price: 2499,
-      image:
-        "https://images.unsplash.com/photo-1664575198308-3959904fa430?w=800&auto=format&fit=crop",
-      level: "Beginner",
-      duration: "3 Weeks",
-      tools: ["ChatGPT", "Notion AI"],
-      outcomes: ["Automate tasks", "Improve efficiency"],
-    },
-    {
-      id: 3,
-      title: "No-Code AI Automation",
-      category: "AI for Everyone",
-      role: "Non-Tech Users",
-      description:
-        "Build AI workflows without coding using modern no-code tools.",
-      fullDescription:
-        "Empower yourself to build complex business systems without writing a single line of code. Learn to connect various AI services with operational tools through Make and Zapier, creating self-sustaining loops that handle repetitive tasks and data processing automatically.",
-      price: 2999,
-      image:
-        "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop",
-      level: "Intermediate",
-      duration: "5 Weeks",
-      tools: ["Zapier", "Make"],
-      outcomes: ["Build automations", "Save time"],
-    },
-    {
-      id: 4,
-      title: "AI for Students: Smart Learning",
-      category: "AI for Students",
-      role: "Students",
-      description: "Use AI tools for study, assignments, and research work.",
-      fullDescription:
-        "Transform your academic journey by leveraging AI for efficient note-taking, complex topic summarization, and personalized learning paths. This course teaches students how to use AI ethically to enhance critical thinking and deepen their understanding of academic subjects.",
-      price: 1499,
-      image:
-        "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=800&auto=format&fit=crop",
-      level: "Beginner",
-      duration: "3 Weeks",
-      tools: ["ChatGPT", "Grammarly"],
-      outcomes: ["Better study habits", "Faster learning"],
-    },
-    {
-      id: 5,
-      title: "AI for Coding Beginners",
-      category: "AI for Students",
-      role: "Tech Students",
-      description: "Learn coding faster using AI assistants and tools.",
-      fullDescription:
-        "Accelerate your journey into software development by using AI as a 24/7 mentor. Learn to use GitHub Copilot and ChatGPT to explain complex code, debug errors instantly, and generate boilerplate structures, allowing you to focus on logic and system design rather than syntax.",
-      price: 1999,
-      image:
-        "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop",
-      level: "Beginner",
-      duration: "4 Weeks",
-      tools: ["GitHub Copilot", "ChatGPT"],
-      outcomes: ["Write better code", "Debug efficiently"],
-    },
-    {
-      id: 6,
-      title: "AI Career Starter Kit",
-      category: "AI for Students",
-      role: "Final Year Students",
-      description: "Prepare for AI careers with projects and tools.",
-      fullDescription:
-        "Build a robust portfolio that stands out to recruiters in the AI space. This program guides you through the technical foundations of Python and machine learning while simultaneously teaching you how to position your skills effectively in the job market, from resume optimization to technical interviews.",
-      price: 3499,
-      image:
-        "https://images.unsplash.com/photo-1605379399642-870262d3d051?w=800&auto=format&fit=crop",
-      level: "Intermediate",
-      duration: "6 Weeks",
-      tools: ["Python", "TensorFlow"],
-      outcomes: ["Build projects", "Get job-ready"],
-    },
-    {
-      id: 7,
-      title: "AI for Professionals",
-      category: "AI for Professionals",
-      role: "Working Professionals",
-      description: "Leverage AI tools to enhance workplace productivity.",
-      fullDescription:
-        "Designed for the modern workforce, this course bridges the gap between traditional operations and AI-driven efficiency. Learn to integrate AI into your specific role, whether in HR, operations, or finance, to drive measurable results and stay ahead of the curve.",
-      price: 3999,
-      image:
-        "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&auto=format&fit=crop",
-      level: "Intermediate",
-      duration: "4 Weeks",
-      tools: ["ChatGPT", "Excel AI"],
-      outcomes: ["Automate workflows", "Improve output"],
-    },
-    {
-      id: 8,
-      title: "AI for Marketing & Sales",
-      category: "AI for Professionals",
-      role: "Marketers",
-      description: "Use AI for content creation, ads, and customer targeting.",
-      fullDescription:
-        "Revolutionize your marketing funnel with AI-driven personalization and content generation. Learn to use sophisticated tools to predict customer behavior, automate high-quality social media content, and optimize ad spend through precision targeting and data-driven insights.",
-      price: 4499,
-      image:
-        "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&auto=format&fit=crop",
-      level: "Intermediate",
-      duration: "5 Weeks",
-      tools: ["Jasper AI", "HubSpot AI"],
-      outcomes: ["Better campaigns", "Higher conversions"],
-    },
-    {
-      id: 9,
-      title: "AI Workflow Automation",
-      category: "AI for Professionals",
-      role: "Managers",
-      description: "Automate business processes using AI tools.",
-      fullDescription:
-        "Scale your business operations without increasing overhead. This advanced course dives deep into enterprise-level automation strategies, teaching you how to map out complex business processes and replace manual bottlenecks with intelligent, AI-powered system integrations.",
-      price: 4999,
-      image:
-        "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&auto=format&fit=crop",
-      level: "Advanced",
-      duration: "6 Weeks",
-      tools: ["Zapier", "Power Automate"],
-      outcomes: ["Reduce manual work", "Scale operations"],
-    },
-    {
-      id: 10,
-      title: "AI Strategy for Leaders",
-      category: "AI for Business Leaders",
-      role: "Executives",
-      description: "Understand how to implement AI in business strategy.",
-      fullDescription:
-        "Navigate the complex landscape of AI adoption from a leadership perspective. This strategic program focuses on identifying high-ROI AI opportunities, managing the cultural shift within teams, and ensuring ethical and compliant AI implementation at scale.",
-      price: 6999,
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop",
-      level: "Advanced",
-      duration: "4 Weeks",
-      tools: ["AI Dashboards"],
-      outcomes: ["Strategic decisions", "AI adoption"],
-    },
-    {
-      id: 11,
-      title: "AI in Business Transformation",
-      category: "AI for Business Leaders",
-      role: "Founders",
-      description: "Drive innovation using AI across departments.",
-      fullDescription:
-        "Lead the charge in the AI revolution by transforming your entire business model. This comprehensive program covers everything from data infrastructure readiness to cross-departmental AI integration, helping you build a future-ready organization that thrives on intelligent automation.",
-      price: 7999,
-      image:
-        "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&auto=format&fit=crop",
-      level: "Advanced",
-      duration: "5 Weeks",
-      tools: ["Data AI Tools"],
-      outcomes: ["Business growth", "Automation strategy"],
-    },
-    {
-      id: 12,
-      title: "Advanced AI Engineering",
-      category: "Advanced AI Programs",
-      role: "Developers",
-      description: "Deep dive into AI/ML, model building, and deployment.",
-      fullDescription:
-        "For those looking to build the next generation of AI products. This technical deep-dive covers transformer architectures, fine-tuning large language models, MLOps, and deploying scalable AI solutions to production environments using cutting-edge frameworks.",
-      price: 9999,
-      image:
-        "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&auto=format&fit=crop",
-      level: "Expert",
-      duration: "8 Weeks",
-      tools: ["Python", "PyTorch", "TensorFlow"],
-      outcomes: ["Build AI models", "Deploy applications"],
-    },
-  ];
 
 
 
